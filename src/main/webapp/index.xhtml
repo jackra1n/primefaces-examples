@@ -12,14 +12,35 @@
 <h:body>
 	<h1>Hello World PrimeFace</h1>
 
+	Current Locale: <h:outputText value="#{editor.locale}" />
+	<br /><br />
+
 	<h:form>
-		<p:inputNumber value="#{editor.numberValue}" />
+		Number (plain): <p:inputNumber value="#{editor.numberValue}" />
 
-		<br />		
+		<br /><br />
+		
+		Number (convertNumber type="number"):
+		<p:inputNumber value="#{editor.numberValue}">
+			<f:convertNumber  type="number" />
+		</p:inputNumber>
 
+		<br /><br />
+		
+		Double: <p:inputNumber value="#{editor.doubleValue}" />
+
+		<br /><br />
+		
 		<p:editor value="#{editor.value}" />
 		
+		<br /><br />
 		
+		<h:commandButton value="LOCALE DE" action="#{editor.setLocaleDe}" />
+		<h:commandButton value="LOCALE EN" action="#{editor.setLocaleEn}" />
+		
+		<br/><br/>
+		
+		<h:commandButton value="Submit" action="#{editor.save}" />
 		
 	</h:form>
 
