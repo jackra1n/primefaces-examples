@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    image: "tomcat:8-jre17"
+    volumes:
+      - ./target/primefaces-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/primefaces-examples.war
+    ports:
+      - 8080:8080
