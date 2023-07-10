@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: "tomcat:8-jre17"
+    image: "tomcat:9"
     volumes:
       - ./target/primefaces-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/primefaces-examples.war
     ports:

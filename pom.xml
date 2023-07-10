@@ -24,38 +24,16 @@
 
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
-		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>jsf-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.glassfish/javax.faces -->
-		<dependency>
-		    <groupId>org.glassfish</groupId>
-		    <artifactId>javax.faces</artifactId>
-		    <version>2.4.0</version>
-		</dependency>
-
-		
-		<dependency>
-			<groupId>jakarta.servlet</groupId>
-			<artifactId>jakarta.servlet-api</artifactId>
-			<version>5.0.0</version>
-	  	</dependency>
-
 		<!-- JSF -->
 		<dependency>
 			<groupId>org.apache.myfaces.core</groupId>
 			<artifactId>myfaces-api</artifactId>
-			<version>4.0.1</version>
+			<version>2.2.15</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.myfaces.core</groupId>
 			<artifactId>myfaces-impl</artifactId>
-			<version>4.0.1</version>
+			<version>2.2.15</version>
 		</dependency>
 
 		<!-- PrimeFaces -->
@@ -63,6 +41,12 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>11.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>2.0</version>
 		</dependency>
 
 	</dependencies>
