@@ -13,7 +13,10 @@ public class MainBean {
 
   private static Logger logger = Logger.getGlobal();
 
+  private String output = "output";
+
   public void redirect() throws IOException {
+    output += "\noutput";
     logger.log(Level.ALL, "something");
     FacesContext facesContext = FacesContext.getCurrentInstance();
     ExternalContext externalContext = facesContext.getExternalContext();
@@ -22,5 +25,9 @@ public class MainBean {
 
   public String getName() {
     return "Main Bean";
+  }
+
+  public String getOutput() {
+    return output;
   }
 }
