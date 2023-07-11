@@ -3,8 +3,10 @@ package com.test;
 import java.util.logging.Logger;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
-@ManagedBean(name = "secondBean")
+@ManagedBean
+@ViewScoped
 public class SecondBean {
 
   private static Logger logger = Logger.getGlobal();

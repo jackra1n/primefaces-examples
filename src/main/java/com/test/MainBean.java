@@ -5,10 +5,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
-@ManagedBean(name = "mainBean")
+@ManagedBean
+@ViewScoped
 public class MainBean {
 
   private static Logger logger = Logger.getGlobal();
@@ -27,7 +29,14 @@ public class MainBean {
     return "Main Bean";
   }
 
+  public void setName(String test) {
+  }
+
   public String getOutput() {
     return output;
+  }
+
+  public void setOutput(String output) {
+    this.output = output;
   }
 }
