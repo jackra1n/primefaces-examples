@@ -15,12 +15,14 @@ public class MainBean {
 
   private String output = "output";
 
-  public void redirect() throws IOException {
-    output += "\noutput";
+  public String redirect() throws IOException {
+    System.out.println("something");
     logger.log(Level.ALL, "something");
+    output += "\noutput";
     FacesContext facesContext = FacesContext.getCurrentInstance();
     ExternalContext externalContext = facesContext.getExternalContext();
-    externalContext.redirect("newPage.xhtml");
+    externalContext.redirect("second.xhtml");
+    return "Test";
   }
 
   public void doAction() {

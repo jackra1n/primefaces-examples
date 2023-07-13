@@ -7,14 +7,16 @@
 </h:head>
 <h:body>
   <h1>Hello World PrimeFace</h1>
-
-  <h:outputText value="This is: #{mainBean.name}" />
-  <br />
-  <p:commandButton actionListener="#{mainBean.redirect()}" value="Redirect"/>
-  <br />
-  <h:commandButton actionListener="#{mainBean.doAction()}" value="do action"/>
-  <br />
-  <h:outputText value="output: #{mainBean.output}"/>
+  
+  <h:form>
+    <h:outputText value="This is: #{mainBean.name}" />
+    <br />
+    <p:commandButton action="#{mainBean.redirect()}" value="Redirect"/>
+    <br />
+    <p:commandButton action="#{mainBean.doAction()}" value="some action"/>
+    <br />
+    <h:outputText value="output: #{mainBean.output}"/>
+  </h:form>
 
 </h:body>
 </html>
