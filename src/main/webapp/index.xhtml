@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
-  xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+  xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
 
 <h:head>
   <title>main page title</title>
@@ -10,7 +10,9 @@
 
   <h:outputText value="This is: #{mainBean.name}" />
   <br />
-  <p:commandButton actionListener="#{mainBean.redirect}" value="Redirect"/>
+  <p:commandButton actionListener="#{mainBean.redirect()}" value="Redirect"/>
+  <br />
+  <h:commandButton actionListener="#{mainBean.doAction()}" value="do action"/>
   <br />
   <h:outputText value="output: #{mainBean.output}"/>
 

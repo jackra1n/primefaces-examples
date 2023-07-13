@@ -5,12 +5,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 @ManagedBean
-@ViewScoped
 public class MainBean {
 
   private static Logger logger = Logger.getGlobal();
@@ -25,11 +23,13 @@ public class MainBean {
     externalContext.redirect("newPage.xhtml");
   }
 
-  public String getName() {
-    return "Main Bean";
+  public void doAction() {
+    System.out.println("Im doing action");
+    logger.log(Level.ALL, "do cation");
   }
 
-  public void setName(String test) {
+  public String getName() {
+    return "Main Bean";
   }
 
   public String getOutput() {
